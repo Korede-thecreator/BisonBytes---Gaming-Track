@@ -1,0 +1,51 @@
+`timescale 1ns / 1ps
+
+module whack_a_mole_game_tb;
+
+// Inputs to the module
+reg clk;
+reg reset;
+reg [7:0] btn;
+
+// Outputs from the module
+wire [7:0] led;
+
+// Instantiate the Unit Under Test (UUT)
+whack_a_mole_game uut (
+    .clk(clk),
+    .reset(reset),
+    .btn(btn),
+    .led(led)
+);
+
+// Clock generation
+initial begin
+    clk = 0;
+    forever #5 clk = ~clk; // Toggle clock every 5 ns
+end
+
+// Test sequence
+initial begin
+    // Initialize Inputs
+    reset = 1;
+    btn = 0;
+
+    // Wait for global reset
+    #100;
+    
+    reset = 0; // Release reset
+    #100; // Wait for some operations
+
+    // Simulate button press
+    btn = 8'b00000001; // Example: Pressing button 1
+    #10; // Wait a bit
+    btn = 0; // Release button
+    
+    #100; // Wait for more operations
+
+    // Add more button press simulations here as needed
+
+    $finish; // End simulation
+end
+
+endmodule
