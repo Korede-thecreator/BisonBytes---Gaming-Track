@@ -49,3 +49,5 @@ Display and Game Logic Integration
 Integrating display logic, input handling, and game mechanics requires careful design, especially managing the timing and synchronization of each component. For instance, updating the mole's position should consider the current level's speed, ensuring the game's difficulty increases as the player advances.
 
 Due to space and complexity, the snippets provided above are simplified and need to be integrated into a cohesive design. Developing a complete game involves considering how each component interacts within the FPGA's constraints, handling edge cases, and optimizing resource usage.
+
+https://youtu.be/4enWoVHCykI?si=8Qk_45jnql_qec_P
