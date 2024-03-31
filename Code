@@ -1,0 +1,50 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 03/30/2024 08:49:17 PM
+// Design Name: 
+// Module Name: Top
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+//user==# of switch user selects
+//led== respective LED on 4 by 2 plane
+module Top();
+    reg clk;
+    initial begin
+        clk = 1;
+    end
+    always begin
+        #4;
+        clk = ~clk;
+    end
+    
+    //Randomization of 1 thru 8
+    RandomNumber numbers;
+    Number(clk,SwitchNum);
+   
+    reg [4:0] pts;
+    reg [2:0] user; //only needs to go from 1-8
+    reg [2:0] led;
+    
+    always begin
+        if(user==led) begin
+            pts = pts + 1;
+         end
+         else pts = pts - 1;
+    end
+    
+    
+endmodule
