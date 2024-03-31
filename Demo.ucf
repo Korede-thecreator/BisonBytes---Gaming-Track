@@ -1,0 +1,40 @@
+NET "clock" LOC = "B8"; # Clock signal
+
+# Pin assignment for LEDs
+NET "leds<7>" LOC = "G1" ; # Bank = 3, Signal name = LD7
+NET "leds<6>" LOC = "P4" ; # Bank = 2, Signal name = LD6
+NET "leds<5>" LOC = "N4" ;  # Bank = 2, Signal name = LD5
+NET "leds<4>" LOC = "N5" ;  # Bank = 2, Signal name = LD4
+NET "leds<3>" LOC = "P6" ; # Bank = 2, Signal name = LD3
+NET "leds<2>" LOC = "P7" ; # Bank = 3, Signal name = LD2
+NET "leds<1>" LOC = "M11" ; # Bank = 2, Signal name = LD1
+NET "leds<0>" LOC = "M5" ;  # Bank = 2, Signal name = LD0
+
+# Pin assignment for SWs
+NET "switches<7>" LOC = "N3";  # Bank = 2, Signal name = SW7
+NET "switches<6>" LOC = "E2";  # Bank = 3, Signal name = SW6
+NET "switches<5>" LOC = "F3";  # Bank = 3, Signal name = SW5
+NET "switches<4>" LOC = "G3";  # Bank = 3, Signal name = SW4
+NET "switches<3>" LOC = "B4";  # Bank = 3, Signal name = SW3
+NET "switches<2>" LOC = "K3";  # Bank = 3, Signal name = SW2
+NET "switches<1>" LOC = "L3";  # Bank = 3, Signal name = SW1
+NET "switches<0>" LOC = "P11";  # Bank = 2, Signal name = SW0
+
+# Button
+NET "reset" LOC = "A7";  # Bank = 1, Signal name = BTN3
+
+# 7 Segment Display
+# Anodes
+NET "anode_signals<0>" LOC = "F12"; # 1st anode signal
+NET "anode_signals<1>" LOC = "J12"; # 2nd anode signal
+NET "anode_signals<2>" LOC = "M13"; # 3rd anode signal
+NET "anode_signals<3>" LOC = "K14"; # 4th anode signal
+
+# Cathodes
+NET "display_signals<6>" LOC = "L14"; # Signal name = CA
+NET "display_signals<5>" LOC = "H12"; # Signal name = CB
+NET "display_signals<4>" LOC = "N14"; # Signal name = CC
+NET "display_signals<3>" LOC = "N11"; # Signal name = CD
+NET "display_signals<2>" LOC = "P12"; # Signal name = CE
+NET "display_signals<1>" LOC = "L13"; # Signal name = CF
+NET "display_signals<0>" LOC = "M12"; # Signal name = CG
