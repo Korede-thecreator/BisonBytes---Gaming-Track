@@ -128,7 +128,7 @@ module seven_segment_driver(
 						// Display the second digit of the seconds number
 						// activate LED4 and Deactivate LED2, LED3, LED1
 						anode_signals <= 4'b1110;
-						LED_BCD <= 4'b0000;
+						LED_BCD <= count[4:0];
 					end
 			endcase
 		end
